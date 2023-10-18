@@ -19,6 +19,7 @@ plugins {
   id("kotlin-android")
   id("com.google.devtools.ksp")
   id("dagger.hilt.android.plugin")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
@@ -109,7 +110,8 @@ androidComponents {
 }
 
 dependencies {
-  ksp(libs.androidx.room.compiler)
+  implementation("androidx.core:core-ktx:+")
+    ksp(libs.androidx.room.compiler)
   ksp(libs.hilt.android.compiler)
   implementation(libs.androidx.core.ktx)
   implementation(libs.androidx.lifecycle.livedata.ktx)

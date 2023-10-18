@@ -57,6 +57,7 @@ dependencies {
     implementation(libs.androidx.espresso.core)
     implementation(libs.androidx.test.uiautomator)
     implementation(libs.androidx.benchmark.macro.junit4)
+    implementation("androidx.core:core-ktx:+")
 }
 
 androidComponents {
